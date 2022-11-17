@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>c13cdea3-db02-4db6-8310-a3ec434be42d</Id>
+  <Type>profile.xml</Type>
+  <Name>XML_PorfilResponse</Name>
+  <Version>1</Version>
+  <FolderId name="Training-Mamadou Oury-Diallo/Process Library/API ATMOSPHERE">
+  5304245</FolderId>
+  <AccountId>trainingmamadouourydiallo-W7B196</AccountId>
+  <Properties>
+    <Property>
+      <Name>xmlflavor</Name>
+      <Value>basic</Value>
+    </Property>
+  </Properties>
+  <References />
+  <Description />
+  <Object>
+    <XMLProfile modelVersion="2" strict="true">
+      <ProfileProperties>
+        <XMLGeneralInfo />
+        <XMLOptions encoding="utf8" respectMinOccurs="false"
+        respectMinOccursAlways="false" parseRespectMaxOccurs="true"
+        implicitElementOrdering="true" />
+      </ProfileProperties>
+      <DataElements>
+        <XMLElement key="3" name="ExecutionRequest"
+        useNamespace="1" dataType="character" minOccurs="1"
+        maxOccurs="1" isNode="true" isMappable="true">
+          <DataFormat>
+            <ProfileCharacterFormat />
+          </DataFormat>
+          <XMLNSDeclList>
+            <XMLNSDeclaration key="1" defaultNamespace="false"
+            isNode="true" isMappable="false" />
+          </XMLNSDeclList>
+          <XMLAttribute key="4" name="processId" useNamespace="-1"
+          dataType="character" isNode="true" isMappable="true"
+          required="false">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLAttribute>
+          <XMLAttribute key="5" name="atomId" useNamespace="-1"
+          dataType="character" isNode="true" isMappable="true"
+          required="false">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLAttribute>
+          <XMLAttribute key="6" name="requestId" useNamespace="-1"
+          dataType="character" isNode="true" isMappable="true"
+          required="false">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLAttribute>
+          <XMLAttribute key="7" name="recordUrl" useNamespace="-1"
+          dataType="character" isNode="true" isMappable="true"
+          required="false">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLAttribute>
+        </XMLElement>
+      </DataElements>
+      <Namespaces>
+        <XMLNamespace key="-1" name="Empty Namespace">
+          <Types />
+        </XMLNamespace>
+        <XMLNamespace key="1" prefix="ns1"
+        name="http://api.platform.boomi.com/" />
+        <XMLNamespace key="2" prefix="ns2"
+        name="http://www.w3.org/2001/XMLSchema-instance" />
+      </Namespaces>
+    </XMLProfile>
+  </Object>
+</Component>

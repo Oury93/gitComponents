@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>bd5db0b9-b68e-468f-99e9-4649e5b044d4</Id>
+  <Type>transform.map</Type>
+  <Name>New Map</Name>
+  <Version>2</Version>
+  <FolderId name="Training-Mamadou Oury-Diallo/Process Library/API ATMOSPHERE">
+  5304245</FolderId>
+  <AccountId>trainingmamadouourydiallo-W7B196</AccountId>
+  <Properties />
+  <References>
+    <Ref compId="c13cdea3-db02-4db6-8310-a3ec434be42d"
+    refId="fromProfile" name="XML_PorfilResponse" />
+    <Ref compId="5f769539-d1be-4ee4-bf65-a37041c13065"
+    refId="toProfile" name="RequestID_XML" />
+  </References>
+  <Description />
+  <Object>
+    <Map fromProfile="c13cdea3-db02-4db6-8310-a3ec434be42d"
+    toProfile="5f769539-d1be-4ee4-bf65-a37041c13065">
+      <Mappings>
+        <Mapping fromType="profile" fromKey="6"
+        fromKeyPath="*[@key='3']/*[@key='6']"
+        fromNamePath="ExecutionRequest/requestId" toType="profile"
+        toKey="2" toKeyPath="*[@key='1']/*[@key='2']"
+        toNamePath="Request/requestId" />
+      </Mappings>
+      <Functions optimizeExecutionOrder="true" />
+      <Defaults />
+      <DocumentCacheJoins />
+    </Map>
+  </Object>
+</Component>

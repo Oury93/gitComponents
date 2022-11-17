@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>c11f7c61-1009-43bc-bf0c-1abe05eb3045</Id>
+  <Type>connector-action</Type>
+  <Name>New HTTP Client Connector Operation GET Detail</Name>
+  <Version>1</Version>
+  <FolderId name="Training-Mamadou Oury-Diallo/Process Library/API ATMOSPHERE">
+  5304245</FolderId>
+  <AccountId>trainingmamadouourydiallo-W7B196</AccountId>
+  <Properties>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>http</Value>
+    </Property>
+    <Property>
+      <Name>action-type</Name>
+      <Value>Get</Value>
+    </Property>
+    <Property>
+      <Name>parameter-profile</Name>
+      <Value>EMBEDDED|HttpParameterChooser</Value>
+    </Property>
+  </Properties>
+  <References />
+  <Description />
+  <Object>
+    <Operation>
+      <Archiving enabled="false" directory="" />
+      <Configuration>
+        <HttpGetAction requestProfileType="NONE"
+        responseProfileType="NONE"
+        dataContentType="application/json" methodType="GET"
+        returnErrors="false" followRedirects="true"
+        returnMimeResponse="false" mimePassthrough="false">
+          <requestHeaders />
+          <pathElements>
+            <element name="api/rest/v1/trainingmamadouourydiallo-W7B196/ExecutionRecord/async/"
+            key="2000000" />
+            <element name="RequestID" isVariable="true"
+            key="2000001" />
+          </pathElements>
+          <responseHeaderMapping />
+          <reflectHeaders />
+        </HttpGetAction>
+      </Configuration>
+      <Tracking>
+        <TrackedFields />
+      </Tracking>
+      <Caching />
+    </Operation>
+  </Object>
+</Component>

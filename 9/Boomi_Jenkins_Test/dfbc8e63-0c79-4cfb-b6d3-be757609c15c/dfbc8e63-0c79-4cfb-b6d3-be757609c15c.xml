@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>dfbc8e63-0c79-4cfb-b6d3-be757609c15c</Id>
+  <Type>process</Type>
+  <Name>Boomi_Jenkins_Test</Name>
+  <Version>13</Version>
+  <FolderId name="Training-Mamadou Oury-Diallo/Process Library/API ATMOSPHERE">
+  5304245</FolderId>
+  <AccountId>trainingmamadouourydiallo-W7B196</AccountId>
+  <Properties>
+    <Property>
+      <Name>overrides-enabled</Name>
+      <Value>false</Value>
+    </Property>
+    <Property>
+      <Name>startshape-type</Name>
+      <Value>NOACTION</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="b5ca2e2d-2336-4a0a-899b-d324e81c578d"
+    refId="shape2.connection" name="New HTTP Client Connection" />
+    <Ref compId="286ca187-8a8f-4348-85b5-b31a21e9e2f3"
+    refId="shape2.operation"
+    name="New HTTP Client Connector Operation" />
+    <Ref compId="bd5db0b9-b68e-468f-99e9-4649e5b044d4"
+    refId="shape5" name="New Map" />
+    <Ref compId="b5ca2e2d-2336-4a0a-899b-d324e81c578d"
+    refId="shape6.connection" name="New HTTP Client Connection" />
+    <Ref compId="c11f7c61-1009-43bc-bf0c-1abe05eb3045"
+    refId="shape6.operation"
+    name="New HTTP Client Connector Operation GET Detail" />
+    <Ref compId="5f769539-d1be-4ee4-bf65-a37041c13065"
+    refId="shape6-parameter-0-profile" name="RequestID_XML" />
+  </References>
+  <Description />
+  <Object>
+    <process allowSimultaneous="false" enableUserLog="false"
+    updateRunDates="true" processLogOnErrorOnly="false"
+    workload="general" purgeDataImmediately="false">
+      <shapes>
+        <shape name="shape1" userlabel="" image="start" x="48.0"
+        y="48.0" shapetype="start">
+          <configuration>
+            <noaction />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape3"
+            x="224.0" y="57.0">
+              <linesegment name="shape1.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="82.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="82.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="82.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="161.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="161.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape2" userlabel=""
+        image="connectoraction_icon" x="432.0" y="48.0"
+        shapetype="connectoraction">
+          <configuration>
+            <connectoraction operationId="286ca187-8a8f-4348-85b5-b31a21e9e2f3"
+            connectionId="b5ca2e2d-2336-4a0a-899b-d324e81c578d"
+            actionType="Send" connectorType="http"
+            parameter-profile="EMBEDDED|HttpParameterChooser|286ca187-8a8f-4348-85b5-b31a21e9e2f3"
+            hideSettings="false" allowDynamicCredentials="NONE">
+              <parameters />
+              <dynamicProperties />
+            </connectoraction>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape2.dragpoint1" toShape="shape5"
+            x="624.0" y="57.0">
+              <linesegment name="shape2.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="466.0" y="63.0" />
+              <linesegment name="shape2.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="466.0" y="63.0" />
+              <linesegment name="shape2.dragpoint1.lineseg3"
+              length="87" orient="horizontal" x="466.0" y="63.0" />
+              <linesegment name="shape2.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="553.0" y="63.0" />
+              <linesegment name="shape2.dragpoint1.lineseg5"
+              length="71" orient="horizontal" x="553.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape3" userlabel="" image="message_icon"
+        x="240.0" y="48.0" shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{ "processId":
+              "e07770c1-d260-487f-b700-4a0791738db1", "atomId":
+              "a84f8f75-a070-4294-b0e9-8f7c8ac04549" }'</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape3.dragpoint1" toShape="shape2"
+            x="416.0" y="57.0">
+              <linesegment name="shape3.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="274.0" y="63.0" />
+              <linesegment name="shape3.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="274.0" y="63.0" />
+              <linesegment name="shape3.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="274.0" y="63.0" />
+              <linesegment name="shape3.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="353.0" y="63.0" />
+              <linesegment name="shape3.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="353.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape4" userlabel="" image="stop_icon"
+        x="1232.0" y="48.0" shapetype="stop">
+          <configuration>
+            <stop continue="true" />
+          </configuration>
+          <dragpoints />
+        </shape>
+        <shape name="shape5" userlabel="" image="map_icon"
+        x="640.0" y="48.0" shapetype="map">
+          <configuration>
+            <map mapId="bd5db0b9-b68e-468f-99e9-4649e5b044d4" />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape5.dragpoint1" toShape="shape7"
+            x="768.0" y="41.0">
+              <linesegment name="shape5.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="674.0" y="63.0" />
+              <linesegment name="shape5.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="674.0" y="63.0" />
+              <linesegment name="shape5.dragpoint1.lineseg3"
+              length="55" orient="horizontal" x="674.0" y="63.0" />
+              <linesegment name="shape5.dragpoint1.lineseg4"
+              length="16" orient="vertical" x="729.0" y="47.0" />
+              <linesegment name="shape5.dragpoint1.lineseg5"
+              length="39" orient="horizontal" x="729.0" y="47.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape6" userlabel=""
+        image="connectoraction_icon" x="960.0" y="48.0"
+        shapetype="connectoraction">
+          <configuration>
+            <connectoraction operationId="c11f7c61-1009-43bc-bf0c-1abe05eb3045"
+            connectionId="b5ca2e2d-2336-4a0a-899b-d324e81c578d"
+            actionType="Get" connectorType="http"
+            parameter-profile="EMBEDDED|HttpParameterChooser|c11f7c61-1009-43bc-bf0c-1abe05eb3045"
+            hideSettings="false" allowDynamicCredentials="NONE">
+              <parameters>
+                <parametervalue valueType="profile" key="0"
+                elementToSetId="2000001"
+                elementToSetName="RequestID">
+                  <profileelement elementId="2"
+                  elementName="requestId (Request/requestId)"
+                  profileId="5f769539-d1be-4ee4-bf65-a37041c13065"
+                  profileType="profile.xml" />
+                </parametervalue>
+              </parameters>
+              <dynamicProperties />
+            </connectoraction>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape6.dragpoint1" toShape="shape4"
+            x="1216.0" y="57.0">
+              <linesegment name="shape6.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="994.0" y="63.0" />
+              <linesegment name="shape6.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="994.0" y="63.0" />
+              <linesegment name="shape6.dragpoint1.lineseg3"
+              length="119" orient="horizontal" x="994.0"
+              y="63.0" />
+              <linesegment name="shape6.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="1113.0" y="63.0" />
+              <linesegment name="shape6.dragpoint1.lineseg5"
+              length="103" orient="horizontal" x="1113.0"
+              y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape7" userlabel="" image="dataprocess_icon"
+        x="784.0" y="32.0" shapetype="dataprocess">
+          <configuration>
+            <dataprocess>
+              <step name="Custom Scripting" processtype="12"
+              index="1" key="1">
+                <dataprocessscript language="groovy2"
+                useCache="true">
+                  <script>import java.util.Properties; import
+                  java.io.InputStream;   int waitFor =20; 
+                  Thread.sleep(waitFor * 1000);  // Leave the
+                  rest of the script as-is to pass the Documents to
+                  the next step. for ( int i = 0; i &lt;
+                  dataContext.getDataCount(); i++ ) { InputStream
+                  is = dataContext.getStream(i); Properties props
+                  = dataContext.getProperties(i); 
+                  dataContext.storeStream(is, props); }</script>
+                </dataprocessscript>
+              </step>
+            </dataprocess>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape7.dragpoint1" toShape="shape6"
+            x="944.0" y="57.0">
+              <linesegment name="shape7.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="818.0" y="47.0" />
+              <linesegment name="shape7.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="818.0" y="47.0" />
+              <linesegment name="shape7.dragpoint1.lineseg3"
+              length="71" orient="horizontal" x="818.0" y="47.0" />
+              <linesegment name="shape7.dragpoint1.lineseg4"
+              length="16" orient="vertical" x="889.0" y="47.0" />
+              <linesegment name="shape7.dragpoint1.lineseg5"
+              length="55" orient="horizontal" x="889.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+      </shapes>
+    </process>
+  </Object>
+</Component>

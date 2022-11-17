@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>5f769539-d1be-4ee4-bf65-a37041c13065</Id>
+  <Type>profile.xml</Type>
+  <Name>RequestID_XML</Name>
+  <Version>1</Version>
+  <FolderId name="Training-Mamadou Oury-Diallo/Process Library/API ATMOSPHERE">
+  5304245</FolderId>
+  <AccountId>trainingmamadouourydiallo-W7B196</AccountId>
+  <Properties>
+    <Property>
+      <Name>xmlflavor</Name>
+      <Value>basic</Value>
+    </Property>
+  </Properties>
+  <References />
+  <Description />
+  <Object>
+    <XMLProfile modelVersion="2" strict="true">
+      <ProfileProperties>
+        <XMLGeneralInfo />
+        <XMLOptions encoding="utf8" respectMinOccurs="false"
+        respectMinOccursAlways="false" parseRespectMaxOccurs="true"
+        implicitElementOrdering="true" />
+      </ProfileProperties>
+      <DataElements>
+        <XMLElement key="1" name="Request" useNamespace="-1"
+        dataType="character" minOccurs="1" maxOccurs="-1"
+        isRoot="true" isNode="true" isMappable="true"
+        validateData="false" loopingOption="unique">
+          <DataFormat>
+            <ProfileCharacterFormat />
+          </DataFormat>
+          <QualifierList />
+          <XMLElement key="2" name="requestId" useNamespace="-1"
+          dataType="character" minOccurs="0" maxOccurs="1"
+          isNode="true" isMappable="true" validateData="false"
+          loopingOption="unique">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+            <QualifierList />
+          </XMLElement>
+        </XMLElement>
+      </DataElements>
+      <Namespaces>
+        <XMLNamespace key="-1" name="Empty Namespace">
+          <Types />
+        </XMLNamespace>
+      </Namespaces>
+      <tagLists />
+    </XMLProfile>
+  </Object>
+</Component>

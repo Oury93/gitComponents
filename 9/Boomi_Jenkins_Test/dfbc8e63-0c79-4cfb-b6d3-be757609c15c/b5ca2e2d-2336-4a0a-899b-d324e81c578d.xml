@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>b5ca2e2d-2336-4a0a-899b-d324e81c578d</Id>
+  <Type>connector-settings</Type>
+  <Name>New HTTP Client Connection</Name>
+  <Version>2</Version>
+  <FolderId name="Training-Mamadou Oury-Diallo/Process Library/#Connexion">
+  5113067</FolderId>
+  <AccountId>trainingmamadouourydiallo-W7B196</AccountId>
+  <Properties>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>http</Value>
+    </Property>
+  </Properties>
+  <References />
+  <Description />
+  <Object>
+    <HttpSettings url="https://api.boomi.com"
+    authenticationType="BASIC">
+      <AuthSettings user="mamadou.diallo@wearebeebay.com"
+      password="QRVEPsImNVjtKBK/TlC1hYBUZe5o1caRG7+qTP6H6705XCRcvwZ4pKqxwAWSHHJH2Z9qriUwVtzM8LxZzZkWQRxrLo3k8sVM1XweQyEfB3yRedY27TjB6Th3zcDcT3QaGhPcmS1coHTdtcow2n38OiXT60hCzfGBfdn4ytdR7mI=" />
+      <OAuthSettings requestTokenURL="" accessTokenURL=""
+      authorizationURL="" consumerKey="" accessToken=""
+      suppressBlankAccessToken="false" realm=""
+      signatureMethod="SHA256" />
+      <OAuth2Settings grantType="code"
+      refreshAuthScheme="req_body_params_auth">
+        <credentials clientId="" />
+        <authorizationTokenEndpoint url="">
+          <sslOptions />
+        </authorizationTokenEndpoint>
+        <authorizationParameters />
+        <accessTokenEndpoint url="">
+          <sslOptions />
+        </accessTokenEndpoint>
+        <accessTokenParameters />
+        <scope />
+      </OAuth2Settings>
+      <AwsSettings>
+        <credentials>
+          <accessKeyId />
+          <awsService>s3</awsService>
+          <customService />
+          <awsRegion>ap-northeast-1</awsRegion>
+          <customRegion />
+        </credentials>
+      </AwsSettings>
+      <SSLOptions clientauth="false" trustServerCert="false" />
+    </HttpSettings>
+  </Object>
+</Component>
