@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>a8a73ac3-28b8-4dee-b021-0b84da6cbc82</Id>
+  <Type>process</Type>
+  <Name>Exception Shape Activity</Name>
+  <Version>3</Version>
+  <FolderId name="Training-Mamadou Oury-Diallo/Process Library/Exception Shape">
+  5403188</FolderId>
+  <AccountId>trainingmamadouourydiallo-W7B196</AccountId>
+  <Properties>
+    <Property>
+      <Name>overrides-enabled</Name>
+      <Value>false</Value>
+    </Property>
+    <Property>
+      <Name>startshape-action-type</Name>
+      <Value>Get</Value>
+    </Property>
+    <Property>
+      <Name>startshape-type</Name>
+      <Value>CONNECTOR</Value>
+    </Property>
+    <Property>
+      <Name>startshape-connector-type</Name>
+      <Value>ftp</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="063ebbc2-cd85-4f57-a5c0-fb5a3886b63a"
+    refId="shape1.operation" name="Account XML Get" />
+    <Ref compId="2050848f-a748-4bfd-820e-384bca6a7a73"
+    refId="shape3-parameter-1-profile" name="Account XML" />
+    <Ref compId="e653c83a-8e4d-401f-9302-5e012ff19ca1"
+    refId="shape6" name="Account XML to CSV" />
+    <Ref compId="f75f1f50-934b-49a2-a172-2b63bd3b8c52"
+    refId="shape7-parameter-3-profile" name="Account CSV" />
+    <Ref compId="2050848f-a748-4bfd-820e-384bca6a7a73"
+    refId="shape8-0-profile" name="Account XML" />
+    <Ref compId="2050848f-a748-4bfd-820e-384bca6a7a73"
+    refId="shape9-parameter-2-profile" name="Account XML" />
+    <Ref compId="2050848f-a748-4bfd-820e-384bca6a7a73"
+    refId="shape9-parameter-3-profile" name="Account XML" />
+    <Ref compId="b29125c7-0b29-4000-a359-e45e425d89b5"
+    refId="shape1.connection" name="Boomi Training (FTP)" />
+  </References>
+  <Description />
+  <Object>
+    <process allowSimultaneous="false" enableUserLog="false"
+    updateRunDates="false" processLogOnErrorOnly="false"
+    workload="general" purgeDataImmediately="false">
+      <shapes>
+        <shape name="shape1" userlabel="" image="start" x="48.0"
+        y="48.0" shapetype="start">
+          <configuration>
+            <connectoraction operationId="063ebbc2-cd85-4f57-a5c0-fb5a3886b63a"
+            connectionId="b29125c7-0b29-4000-a359-e45e425d89b5"
+            actionType="Get" connectorType="ftp"
+            parameter-profile="EMBEDDED|ftpparameterchooser|063ebbc2-cd85-4f57-a5c0-fb5a3886b63a"
+            hideSettings="false" allowDynamicCredentials="NONE">
+              <parameters />
+              <dynamicProperties />
+            </connectoraction>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape8"
+            x="224.0" y="57.0">
+              <linesegment name="shape1.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="82.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="82.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="82.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="161.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="161.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape3" userlabel=""
+        image="documentproperties_icon" x="624.0" y="48.0"
+        shapetype="documentproperties">
+          <configuration>
+            <documentproperties>
+              <documentproperty persist="false"
+              name="Disk - File Name"
+              propertyId="connector.disk.filename" defaultValue=""
+              isTradingPartner="false">
+                <sourcevalues>
+                  <parametervalue valueType="profile" key="1">
+                    <profileelement elementId="3"
+                    elementName="CompanyName (Account/CompanyName)"
+                    profileId="2050848f-a748-4bfd-820e-384bca6a7a73"
+                    profileType="profile.xml" />
+                  </parametervalue>
+                  <parametervalue valueType="static" key="2">
+                    <staticparameter staticproperty=".xml" />
+                  </parametervalue>
+                </sourcevalues>
+              </documentproperty>
+            </documentproperties>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape3.dragpoint1" toShape="shape11"
+            x="1088.0" y="57.0">
+              <linesegment name="shape3.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="658.0" y="63.0" />
+              <linesegment name="shape3.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="658.0" y="63.0" />
+              <linesegment name="shape3.dragpoint1.lineseg3"
+              length="223" orient="horizontal" x="658.0"
+              y="63.0" />
+              <linesegment name="shape3.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="881.0" y="63.0" />
+              <linesegment name="shape3.dragpoint1.lineseg5"
+              length="207" orient="horizontal" x="881.0"
+              y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape5" userlabel="" image="branch_icon"
+        x="432.0" y="48.0" shapetype="branch">
+          <configuration>
+            <branch numBranches="2" />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape5.dragpoint1" toShape="shape3"
+            identifier="1" text="1" x="608.0" y="57.0">
+              <linesegment name="shape5.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="466.0" y="63.0" />
+              <linesegment name="shape5.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="466.0" y="63.0" />
+              <linesegment name="shape5.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="466.0" y="63.0" />
+              <linesegment name="shape5.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="545.0" y="63.0" />
+              <linesegment name="shape5.dragpoint1.lineseg5"
+              length="63" orient="horizontal" label="1" x="545.0"
+              y="63.0" />
+            </dragpoint>
+            <dragpoint name="shape5.dragpoint2" toShape="shape6"
+            identifier="2" text="2" x="608.0" y="217.0">
+              <linesegment name="shape5.dragpoint2.lineseg1"
+              length="0" orient="horizontal" x="466.0" y="63.0" />
+              <linesegment name="shape5.dragpoint2.lineseg2"
+              length="0" orient="vertical" x="466.0" y="63.0" />
+              <linesegment name="shape5.dragpoint2.lineseg3"
+              length="79" orient="horizontal" x="466.0" y="63.0" />
+              <linesegment name="shape5.dragpoint2.lineseg4"
+              length="160" orient="vertical" x="545.0" y="63.0" />
+              <linesegment name="shape5.dragpoint2.lineseg5"
+              length="63" orient="horizontal" label="2" x="545.0"
+              y="223.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape6" userlabel="" image="map_icon"
+        x="624.0" y="208.0" shapetype="map">
+          <configuration>
+            <map mapId="e653c83a-8e4d-401f-9302-5e012ff19ca1" />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape6.dragpoint1" toShape="shape7"
+            x="800.0" y="217.0">
+              <linesegment name="shape6.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="658.0" y="223.0" />
+              <linesegment name="shape6.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="658.0" y="223.0" />
+              <linesegment name="shape6.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="658.0"
+              y="223.0" />
+              <linesegment name="shape6.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="737.0" y="223.0" />
+              <linesegment name="shape6.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="737.0"
+              y="223.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape7" userlabel=""
+        image="documentproperties_icon" x="816.0" y="208.0"
+        shapetype="documentproperties">
+          <configuration>
+            <documentproperties>
+              <documentproperty persist="false"
+              name="Disk - File Name"
+              propertyId="connector.disk.filename" defaultValue=""
+              isTradingPartner="false">
+                <sourcevalues>
+                  <parametervalue valueType="profile" key="3">
+                    <profileelement elementId="4"
+                    elementName="AccountName (Record/Elements/AccountName)"
+                    profileId="f75f1f50-934b-49a2-a172-2b63bd3b8c52"
+                    profileType="profile.flatfile" />
+                  </parametervalue>
+                  <parametervalue valueType="date" key="1">
+                    <dateparameter datetimemask="yyyy-MM-dd"
+                    dateparametertype="current" />
+                  </parametervalue>
+                  <parametervalue valueType="static" key="2">
+                    <staticparameter staticproperty=".csv" />
+                  </parametervalue>
+                </sourcevalues>
+              </documentproperty>
+            </documentproperties>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape7.dragpoint1" toShape="shape11"
+            x="1088.0" y="57.0">
+              <linesegment name="shape7.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="850.0" y="223.0" />
+              <linesegment name="shape7.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="850.0" y="223.0" />
+              <linesegment name="shape7.dragpoint1.lineseg3"
+              length="127" orient="horizontal" x="850.0"
+              y="223.0" />
+              <linesegment name="shape7.dragpoint1.lineseg4"
+              length="160" orient="vertical" x="977.0" y="63.0" />
+              <linesegment name="shape7.dragpoint1.lineseg5"
+              length="111" orient="horizontal" x="977.0"
+              y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape8" userlabel="Test Industry?"
+        image="decision_icon" x="240.0" y="48.0"
+        shapetype="decision">
+          <configuration>
+            <decision name="Test Industry?" comparison="equals">
+              <decisionvalue valueType="profile">
+                <profileelement elementId="12"
+                elementName="Industry (Account/Industry)"
+                profileId="2050848f-a748-4bfd-820e-384bca6a7a73"
+                profileType="profile.xml" />
+              </decisionvalue>
+              <decisionvalue valueType="static">
+                <staticparameter staticproperty="Marketing" />
+              </decisionvalue>
+            </decision>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape8.dragpoint1" toShape="shape5"
+            identifier="true" text="True" x="416.0" y="57.0">
+              <linesegment name="shape8.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="274.0" y="63.0" />
+              <linesegment name="shape8.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="274.0" y="63.0" />
+              <linesegment name="shape8.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="274.0" y="63.0" />
+              <linesegment name="shape8.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="353.0" y="63.0" />
+              <linesegment name="shape8.dragpoint1.lineseg5"
+              length="63" orient="horizontal" label="True"
+              x="353.0" y="63.0" />
+            </dragpoint>
+            <dragpoint name="shape8.dragpoint2" toShape="shape9"
+            identifier="false" text="False" x="400.0" y="201.0">
+              <linesegment name="shape8.dragpoint2.lineseg1"
+              length="0" orient="horizontal" x="274.0" y="63.0" />
+              <linesegment name="shape8.dragpoint2.lineseg2"
+              length="0" orient="vertical" x="274.0" y="63.0" />
+              <linesegment name="shape8.dragpoint2.lineseg3"
+              length="71" orient="horizontal" x="274.0" y="63.0" />
+              <linesegment name="shape8.dragpoint2.lineseg4"
+              length="144" orient="vertical" x="345.0" y="63.0" />
+              <linesegment name="shape8.dragpoint2.lineseg5"
+              length="55" orient="horizontal" label="False"
+              x="345.0" y="207.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape9" userlabel="" image="exception_icon"
+        x="416.0" y="192.0" shapetype="exception">
+          <configuration>
+            <exception title="Invalid Account"
+            stopsingledoc="false"
+            stopProcessReturnSingleDoc="false">
+              <exMessage>Exception Shape: This Account {1} has {2}
+              as the Industry</exMessage>
+              <exParameters>
+                <parametervalue valueType="profile" key="2">
+                  <profileelement elementId="3"
+                  elementName="CompanyName (Account/CompanyName)"
+                  profileId="2050848f-a748-4bfd-820e-384bca6a7a73"
+                  profileType="profile.xml" />
+                </parametervalue>
+                <parametervalue valueType="profile" key="3">
+                  <profileelement elementId="12"
+                  elementName="Industry (Account/Industry)"
+                  profileId="2050848f-a748-4bfd-820e-384bca6a7a73"
+                  profileType="profile.xml" />
+                </parametervalue>
+              </exParameters>
+            </exception>
+          </configuration>
+          <dragpoints />
+        </shape>
+        <shape name="shape11" userlabel="" image="stop_icon"
+        x="1104.0" y="48.0" shapetype="stop">
+          <configuration>
+            <stop continue="true" />
+          </configuration>
+          <dragpoints />
+        </shape>
+      </shapes>
+    </process>
+  </Object>
+</Component>

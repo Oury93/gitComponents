@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>2050848f-a748-4bfd-820e-384bca6a7a73</Id>
+  <Type>profile.xml</Type>
+  <Name>Account XML</Name>
+  <Version>1</Version>
+  <FolderId name="Training-Mamadou Oury-Diallo/Process Library/Exception Shape">
+  5403188</FolderId>
+  <AccountId>trainingmamadouourydiallo-W7B196</AccountId>
+  <Properties />
+  <References />
+  <Description />
+  <Object>
+    <XMLProfile modelVersion="2" strict="true">
+      <ProfileProperties>
+        <XMLGeneralInfo />
+        <XMLOptions encoding="utf8" implicitElementOrdering="true"
+        parseRespectMaxOccurs="true" respectMinOccurs="false"
+        respectMinOccursAlways="false" />
+      </ProfileProperties>
+      <DataElements>
+        <XMLElement dataType="character" isMappable="true"
+        isNode="true" key="1" maxOccurs="1" minOccurs="1"
+        name="Account" useNamespace="-1">
+          <DataFormat>
+            <ProfileCharacterFormat />
+          </DataFormat>
+          <XMLElement dataType="character" isMappable="true"
+          isNode="true" key="2" maxOccurs="1" minOccurs="0"
+          name="CompanyID" useNamespace="-1">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLElement>
+          <XMLElement dataType="character" isMappable="true"
+          isNode="true" key="3" maxOccurs="1" minOccurs="0"
+          name="CompanyName" useNamespace="-1">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLElement>
+          <XMLElement dataType="character" isMappable="true"
+          isNode="true" key="4" maxOccurs="1" minOccurs="0"
+          name="Website" useNamespace="-1">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLElement>
+          <XMLElement dataType="character" isMappable="true"
+          isNode="true" key="5" maxOccurs="1" minOccurs="0"
+          name="StreetAddress1" useNamespace="-1">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLElement>
+          <XMLElement dataType="character" isMappable="true"
+          isNode="true" key="6" maxOccurs="1" minOccurs="0"
+          name="StreetAddress2" useNamespace="-1">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLElement>
+          <XMLElement dataType="character" isMappable="true"
+          isNode="true" key="7" maxOccurs="1" minOccurs="0"
+          name="City" useNamespace="-1">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLElement>
+          <XMLElement dataType="character" isMappable="true"
+          isNode="true" key="8" maxOccurs="1" minOccurs="0"
+          name="State" useNamespace="-1">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLElement>
+          <XMLElement dataType="character" isMappable="true"
+          isNode="true" key="9" maxOccurs="1" minOccurs="0"
+          name="PostalCode" useNamespace="-1">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLElement>
+          <XMLElement dataType="character" isMappable="true"
+          isNode="true" key="10" maxOccurs="1" minOccurs="0"
+          name="Country" useNamespace="-1">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLElement>
+          <XMLElement dataType="character" isMappable="true"
+          isNode="true" key="11" maxOccurs="1" minOccurs="0"
+          name="Phone" useNamespace="-1">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLElement>
+          <XMLElement dataType="character" isMappable="true"
+          isNode="true" key="12" maxOccurs="1" minOccurs="0"
+          name="Industry" useNamespace="-1">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+          </XMLElement>
+          <XMLElement dataType="character" isMappable="true"
+          isNode="true" key="13" maxOccurs="1" minOccurs="0"
+          name="ContactList" useNamespace="-1">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+            <XMLElement dataType="character" isMappable="true"
+            isNode="true" key="14" maxOccurs="1" minOccurs="0"
+            name="Contact" useNamespace="-1">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+              <XMLElement dataType="character" isMappable="true"
+              isNode="true" key="15" maxOccurs="1" minOccurs="0"
+              name="FirstName" useNamespace="-1">
+                <DataFormat>
+                  <ProfileCharacterFormat />
+                </DataFormat>
+              </XMLElement>
+              <XMLElement dataType="character" isMappable="true"
+              isNode="true" key="16" maxOccurs="1" minOccurs="0"
+              name="LastName" useNamespace="-1">
+                <DataFormat>
+                  <ProfileCharacterFormat />
+                </DataFormat>
+              </XMLElement>
+              <XMLElement dataType="character" isMappable="true"
+              isNode="true" key="17" maxOccurs="1" minOccurs="0"
+              name="Email" useNamespace="-1">
+                <DataFormat>
+                  <ProfileCharacterFormat />
+                </DataFormat>
+              </XMLElement>
+            </XMLElement>
+          </XMLElement>
+        </XMLElement>
+      </DataElements>
+      <Namespaces>
+        <XMLNamespace key="-1" name="Empty Namespace">
+          <Types />
+        </XMLNamespace>
+      </Namespaces>
+    </XMLProfile>
+  </Object>
+</Component>

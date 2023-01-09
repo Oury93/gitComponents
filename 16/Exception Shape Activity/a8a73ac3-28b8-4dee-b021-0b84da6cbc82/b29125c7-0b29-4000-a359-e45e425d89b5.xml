@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>b29125c7-0b29-4000-a359-e45e425d89b5</Id>
+  <Type>connector-settings</Type>
+  <Name>Boomi Training (FTP)</Name>
+  <Version>1</Version>
+  <FolderId name="Training-Mamadou Oury-Diallo/Process Library/Exception Shape">
+  5403188</FolderId>
+  <AccountId>trainingmamadouourydiallo-W7B196</AccountId>
+  <Properties>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>ftp</Value>
+    </Property>
+  </Properties>
+  <References />
+  <Description />
+  <Object>
+    <FTPSettings connectionMode="passive" host="ftp.boomi.com"
+    port="21">
+      <AuthSettings password="beobNc+wYFNPaH5o9+1pqWcpqUuEK0S4iNIWPNDZRO+Sv4ini8k/Tv0x/bMEHGMvE6n64SNjqOSliXMabZnzBHPgYI71/HO0oOmJ5IewoRgvA+8bJ2/YIG7VMFcALG1CmbmueEFNHV520tVcFG6bemcCebASSUgF0nZlhZNofU4="
+      user="boomitrain" />
+      <SSLOptions clientauth="false" sslmode="none" />
+    </FTPSettings>
+  </Object>
+</Component>

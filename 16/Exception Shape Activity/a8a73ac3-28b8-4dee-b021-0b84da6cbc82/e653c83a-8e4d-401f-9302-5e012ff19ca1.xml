@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>e653c83a-8e4d-401f-9302-5e012ff19ca1</Id>
+  <Type>transform.map</Type>
+  <Name>Account XML to CSV</Name>
+  <Version>1</Version>
+  <FolderId name="Training-Mamadou Oury-Diallo/Process Library/Exception Shape">
+  5403188</FolderId>
+  <AccountId>trainingmamadouourydiallo-W7B196</AccountId>
+  <Properties />
+  <References>
+    <Ref compId="2050848f-a748-4bfd-820e-384bca6a7a73"
+    refId="fromProfile" name="Account XML" />
+    <Ref compId="f75f1f50-934b-49a2-a172-2b63bd3b8c52"
+    refId="toProfile" name="Account CSV" />
+  </References>
+  <Description />
+  <Object>
+    <Map fromProfile="2050848f-a748-4bfd-820e-384bca6a7a73"
+    toProfile="f75f1f50-934b-49a2-a172-2b63bd3b8c52">
+      <Mappings>
+        <Mapping fromKey="3" fromKeyPath="*[@key='1']/*[@key='3']"
+        fromNamePath="Account/CompanyName" fromType="profile"
+        toKey="4" toKeyPath="*[@key='1']/*[@key='2']/*[@key='4']"
+        toNamePath="Record/Elements/AccountName"
+        toType="profile" />
+        <Mapping fromKey="12"
+        fromKeyPath="*[@key='1']/*[@key='12']"
+        fromNamePath="Account/Industry" fromType="profile"
+        toKey="5" toKeyPath="*[@key='1']/*[@key='2']/*[@key='5']"
+        toNamePath="Record/Elements/Industry" toType="profile" />
+        <Mapping fromKey="5" fromKeyPath="*[@key='1']/*[@key='5']"
+        fromNamePath="Account/StreetAddress1" fromType="profile"
+        toKey="6" toKeyPath="*[@key='1']/*[@key='2']/*[@key='6']"
+        toNamePath="Record/Elements/Address1" toType="profile" />
+        <Mapping fromKey="6" fromKeyPath="*[@key='1']/*[@key='6']"
+        fromNamePath="Account/StreetAddress2" fromType="profile"
+        toKey="7" toKeyPath="*[@key='1']/*[@key='2']/*[@key='7']"
+        toNamePath="Record/Elements/Address2" toType="profile" />
+        <Mapping fromKey="7" fromKeyPath="*[@key='1']/*[@key='7']"
+        fromNamePath="Account/City" fromType="profile" toKey="8"
+        toKeyPath="*[@key='1']/*[@key='2']/*[@key='8']"
+        toNamePath="Record/Elements/City" toType="profile" />
+        <Mapping fromKey="9" fromKeyPath="*[@key='1']/*[@key='9']"
+        fromNamePath="Account/PostalCode" fromType="profile"
+        toKey="10" toKeyPath="*[@key='1']/*[@key='2']/*[@key='10']"
+        toNamePath="Record/Elements/Zip" toType="profile" />
+        <Mapping fromKey="10"
+        fromKeyPath="*[@key='1']/*[@key='10']"
+        fromNamePath="Account/Country" fromType="profile"
+        toKey="11" toKeyPath="*[@key='1']/*[@key='2']/*[@key='11']"
+        toNamePath="Record/Elements/Country" toType="profile" />
+        <Mapping fromKey="11"
+        fromKeyPath="*[@key='1']/*[@key='11']"
+        fromNamePath="Account/Phone" fromType="profile" toKey="12"
+        toKeyPath="*[@key='1']/*[@key='2']/*[@key='12']"
+        toNamePath="Record/Elements/Phone" toType="profile" />
+        <Mapping fromKey="4" fromKeyPath="*[@key='1']/*[@key='4']"
+        fromNamePath="Account/Website" fromType="profile"
+        toKey="13" toKeyPath="*[@key='1']/*[@key='2']/*[@key='13']"
+        toNamePath="Record/Elements/URL" toType="profile" />
+        <Mapping fromFunction="1" fromKey="2" fromType="function"
+        toKey="15" toKeyPath="*[@key='1']/*[@key='2']/*[@key='15']"
+        toNamePath="Record/Elements/Current Date"
+        toType="profile" />
+        <Mapping fromCacheJoinKey="0" fromKey="8"
+        fromKeyPath="*[@key='1']/*[@key='8']"
+        fromNamePath="Account/State" fromType="profile"
+        toFunction="2" toKey="1" toType="function" />
+        <Mapping fromFunction="2" fromKey="2" fromType="function"
+        toKey="9" toKeyPath="*[@key='1']/*[@key='2']/*[@key='9']"
+        toNamePath="Record/Elements/State" toType="profile" />
+        <Mapping fromCacheJoinKey="0" fromKey="2"
+        fromKeyPath="*[@key='1']/*[@key='2']"
+        fromNamePath="Account/CompanyID" fromType="profile"
+        toFunction="3" toKey="1" toType="function" />
+        <Mapping fromFunction="3" fromKey="2" fromType="function"
+        toKey="3" toKeyPath="*[@key='1']/*[@key='2']/*[@key='3']"
+        toNamePath="Record/Elements/AccountID" toType="profile" />
+      </Mappings>
+      <Functions optimizeExecutionOrder="true">
+        <FunctionStep cacheEnabled="true" category="Date" key="1"
+        name="Get Current Date" position="1" sumEnabled="false"
+        type="CurrentDate" x="30.0" y="347.0">
+          <Inputs />
+          <Outputs>
+            <Output key="2" name="Result" />
+          </Outputs>
+          <Configuration />
+        </FunctionStep>
+        <FunctionStep cacheEnabled="true" cacheOption="none"
+        category="String" key="2" name="String To Upper"
+        position="2" sumEnabled="false" type="String2Upper"
+        x="30.0" y="187.0">
+          <Inputs>
+            <Input default="" key="1" name="Original String" />
+          </Inputs>
+          <Outputs>
+            <Output key="2" name="Result" />
+          </Outputs>
+          <Configuration />
+        </FunctionStep>
+        <FunctionStep cacheEnabled="true" cacheOption="none"
+        category="String" key="3" name="String Prepend"
+        position="3" sumEnabled="false" type="StringPrepend"
+        x="30.0" y="26.0">
+          <Inputs>
+            <Input default="" key="1" name="Original String" />
+            <Input default="15" key="2" name="Fix to Length" />
+            <Input default="0" key="3" name="Char to Prepend" />
+          </Inputs>
+          <Outputs>
+            <Output key="2" name="Result" />
+          </Outputs>
+          <Configuration />
+        </FunctionStep>
+      </Functions>
+      <Defaults>
+        <Default toKey="14" value="1" />
+      </Defaults>
+      <DocumentCacheJoins />
+    </Map>
+  </Object>
+</Component>
