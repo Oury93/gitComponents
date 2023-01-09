@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>063ebbc2-cd85-4f57-a5c0-fb5a3886b63a</Id>
+  <Type>connector-action</Type>
+  <Name>Account XML Get</Name>
+  <Version>2</Version>
+  <FolderId name="Training-Mamadou Oury-Diallo/Process Library/Exception Shape">
+  5403188</FolderId>
+  <AccountId>trainingmamadouourydiallo-W7B196</AccountId>
+  <Properties>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>ftp</Value>
+    </Property>
+    <Property>
+      <Name>action-type</Name>
+      <Value>Get</Value>
+    </Property>
+    <Property>
+      <Name>parameter-profile</Name>
+      <Value>EMBEDDED|ftpparameterchooser</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="2050848f-a748-4bfd-820e-384bca6a7a73"
+    refId="track-value-40698-parameter-0-profile"
+    name="Account XML" />
+  </References>
+  <Description />
+  <Object>
+    <Operation>
+      <Archiving enabled="false" directory="" />
+      <Configuration>
+        <FTPGetAction ftpaction="actionget"
+        remoteDirectory="accounts" fileToMove="Account*"
+        transferType="binary" maxFileCount="0" />
+      </Configuration>
+      <Tracking>
+        <TrackedFields>
+          <TrackedField fieldId="40698" fieldName="DocTrack">
+            <sourcevalues>
+              <parametervalue valueType="profile" key="0">
+                <profileelement elementId="2"
+                elementName="CompanyID (Account/CompanyID)"
+                profileId="2050848f-a748-4bfd-820e-384bca6a7a73"
+                profileType="profile.xml" />
+              </parametervalue>
+            </sourcevalues>
+          </TrackedField>
+        </TrackedFields>
+      </Tracking>
+      <Caching />
+    </Operation>
+  </Object>
+</Component>

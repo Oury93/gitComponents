@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>f75f1f50-934b-49a2-a172-2b63bd3b8c52</Id>
+  <Type>profile.flatfile</Type>
+  <Name>Account CSV</Name>
+  <Version>1</Version>
+  <FolderId name="Training-Mamadou Oury-Diallo/Process Library/Exception Shape">
+  5403188</FolderId>
+  <AccountId>trainingmamadouourydiallo-W7B196</AccountId>
+  <Properties />
+  <References />
+  <Description />
+  <Object>
+    <FlatFileProfile modelVersion="2" strict="true">
+      <ProfileProperties>
+        <GeneralInfo fileType="delimited"
+        useColumnHeaders="true" />
+        <Options>
+          <DataOptions />
+          <DelimitedOptions fileDelimiter="commadelimited"
+          removeEscape="false"
+          textQualifier="textqualifierdouble" />
+        </Options>
+      </ProfileProperties>
+      <DataElements>
+        <FlatFileRecord detectFormat="numberofcolumns"
+        isNode="true" key="1" name="Record">
+          <FlatFileElements isNode="true" key="2" name="Elements">
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="3" mandatory="false" maxLength="0" minLength="0"
+            name="AccountID" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="4" mandatory="false" maxLength="0" minLength="0"
+            name="AccountName" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="5" mandatory="false" maxLength="0" minLength="0"
+            name="Industry" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="6" mandatory="false" maxLength="0" minLength="0"
+            name="Address1" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="7" mandatory="false" maxLength="0" minLength="0"
+            name="Address2" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="8" mandatory="false" maxLength="0" minLength="0"
+            name="City" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="9" mandatory="false" maxLength="0" minLength="0"
+            name="State" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="10" mandatory="false" maxLength="0" minLength="0"
+            name="Zip" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="11" mandatory="false" maxLength="0" minLength="0"
+            name="Country" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="12" mandatory="false" maxLength="0" minLength="0"
+            name="Phone" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="13" mandatory="false" maxLength="0" minLength="0"
+            name="URL" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="14" mandatory="false" maxLength="0" minLength="0"
+            name="Status" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="15" mandatory="false" maxLength="0" minLength="0"
+            name="Current Date" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+          </FlatFileElements>
+        </FlatFileRecord>
+      </DataElements>
+    </FlatFileProfile>
+  </Object>
+</Component>
